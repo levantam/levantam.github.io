@@ -53,6 +53,7 @@ function delay(){
 	var myInterval1 = window.setInterval(function () {
 		try {
 		    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+		    $('body').css({"width":"100%", "height":"100%"});
 		}
 		catch(err) {}
 	  
