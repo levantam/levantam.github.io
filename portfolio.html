@@ -43,7 +43,7 @@
 <body>
 	<div id="loadding">
 	<div class="circle">
-		Loadding...
+		<img src="images/loading.gif" />
 	</div>
 </div>
 	<div class="container">
@@ -75,7 +75,7 @@
 							<li ng-repeat="project in projects">
 								<figure>
 									<figcaption>
-										<h3>{{project.Name}}</h3>
+										<h4>{{project.Name}}</h4>
 										<small class="date">{{project.Date}}</small>
 										<p class="description" ng-bind-html="project.Content"></p>
 									</figcaption>
