@@ -24,13 +24,13 @@ app.controller("BlogCtrl", ['$scope', '$firebaseArray', function($scope, $fireba
 	var blogs = $firebaseArray(firebaseRef);
 	$scope.blogs = blogs;
 	$scope.showBlog = function(blog){
-		//$('.modal-title').html(blog.Name);
 		$('.modal-cover').attr("src", blog.Cover);
 		$('.modal-meta').html("Meta:" + blog.Meta);
 		$('.modal-body').html(blog.Content);
 		$('.modal-name').html(blog.Name);
-		
 		$('.modal').modal();
+
+		window.location.hash = blog.$id;
 	};
 
 }]);

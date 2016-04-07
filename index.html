@@ -21,6 +21,7 @@
 	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 	 <!-- get the required files from 3rd party sources -->
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
@@ -81,10 +82,10 @@
 					
 			<div class="row" id="footer">
 				<div class="col-md-4">
-					<i class="fa fa-envelope"></i> Email: abc@gmail.com
+					<i class="fa fa-envelope"></i> Email: {{information.Email}}
 				</div>
-				<div class="col-md-4"><i class="fa fa-phone-square"></i>  Phone: 098732748237423</div>
-				<div class="col-md-4"><i class="fa fa-map-marker"></i>  Address: Vietnam</div>
+				<div class="col-md-4"><i class="fa fa-phone-square"></i>  Phone: {{information.Phone}}</div>
+				<div class="col-md-4"><i class="fa fa-map-marker"></i>  Address: {{information.Address}}</div>
 			</div>
 		</div>
 	</div>
