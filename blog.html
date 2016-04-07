@@ -41,14 +41,17 @@
 </head>
 <body>
 	<div id="loadding">
-	<div class="circle">
-		<img src="images/loading.gif" />
-	</div>
-</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row" style="width: 100%;display: block"><img src="images/loading.gif" /></div>
+				<div class="row"><img src="images/welcome.png" /></div>
+			</div>
+		</div>
+	</div><!--Loading-->
 	<div class="container">
 		<div id="blog-list" ng-controller="BlogCtrl">
 			<div class="row">
-				<img src="images/cover-portfolio.jpg" style="width: 100%" />
+				<img src="images/cover-blog.jpg" style="width: 100%" />
 			</div>
 			<div class="row">
 				<ol class="breadcrumb">
@@ -58,7 +61,7 @@
 			</div>	
 			<div class="row blogs">
 				<div class="blog" ng-repeat="blog in blogs" >
-					<div class="row" ng-click="showBlog(blog)">
+					<div id="{{blog.$id}}" class="row" ng-click="showBlog(blog)">
 						<div class="col-md-4">
 							<img class="img" src="{{blog.Cover}}" />
 						</div>
@@ -96,37 +99,14 @@
 		  	   			<p class="modal-meta"></p>
 		  	   		</div>
 			  	   	 <div class="modal-body"></div>
-			  	   	 <div class="disqus">
-						<h2>slfshdl</h2>
-						<div id="disqus_thread"></div>
-					</div>
+			  	   	 
 		  	   </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
 	</div>
 	<script type="text/javascript" src="js/app.js"></script>
-	<script>
-							/**
-							* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-							* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-							*/
-							/*
-							var disqus_config = function () {
-							this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-							this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-							};
-							*/
-							(function() { // DON'T EDIT BELOW THIS LINE
-							var d = document, s = d.createElement('script');
-
-							s.src = 'https://levantamgithubio.disqus.com/embed.js';
-
-							s.setAttribute('data-timestamp', +new Date());
-							(d.head || d.body).appendChild(s);
-							})();
-							</script>
-							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	
 	
 </body>
 </html>

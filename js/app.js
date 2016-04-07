@@ -20,6 +20,7 @@ app.controller("ProjectCtrl", ['$scope', '$firebaseArray', function($scope, $fir
 
 app.controller("BlogCtrl", ['$scope', '$firebaseArray', function($scope, $firebaseArray){
 	
+
 	var firebaseRef = new Firebase(FIREBASE_URL + "Blogs");
 	var blogs = $firebaseArray(firebaseRef);
 	$scope.blogs = blogs;
@@ -32,19 +33,19 @@ app.controller("BlogCtrl", ['$scope', '$firebaseArray', function($scope, $fireba
 
 		window.location.hash = blog.$id;
 	};
-
 }]);
 
 
 function displayLoadding(){
 	var isLoad = false;
 	var myInterval = window.setInterval(function () {
+		isLoad = true;
 		$('#loadding').hide("slow");
 	},700);
 
 	window.setTimeout(function () {
 		if(isLoad)
-	  	clearInterval(myInterval);
+	  		clearInterval(myInterval);
 	},700);
 }
 function delay(){

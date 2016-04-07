@@ -1,7 +1,10 @@
 body {
       font-family: 'Roboto', sans-serif;
 		background: url("../images/bg.jpg") no-repeat center center fixed;
-		background-size: 100% auto;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   }
 .container{
   width: 70% !important;
