@@ -1,282 +1,92 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)https://ukieweb.com/envato/ukiecard/style1/ -->
-<html lang="en" style="overflow-y: hidden;" class="gr__ukieweb_com"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Home | ukieCard</title>
-    <meta name="author" content="ukieweb">
-    <meta name="keywords" content="ukieCard, css3, template, html5 template">
-    <meta name="description" content="ukieCard - Personal Vcard &amp; Resume HTML Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Font Awesome -->
-    <link type="text/css" media="all" href="./index_files/font-awesome.min.css" rel="stylesheet">
-    <!-- Libs CSS -->
-    <link type="text/css" media="all" href="./index_files/bootstrap.min.css" rel="stylesheet">
-    <!-- Animate CSS -->
-    <link type="text/css" media="all" href="./index_files/animate.css" rel="stylesheet">
-    <!-- Template CSS -->
-    <link type="text/css" media="all" href="./index_files/style.css" rel="stylesheet">
-    <!-- Switcher CSS -->
-    <link type="text/css" media="all" href="./index_files/switcher.css" rel="stylesheet">
-    <link href="./index_files/color-blue.css" rel="stylesheet" type="text/css" data-color="color-blue" media="all" id="stylesheet-new">
-    <!-- Responsive CSS -->
-    <link type="text/css" media="all" href="./index_files/respons.css" rel="stylesheet">
-    <!-- Style Switcher -->
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="144x144" href="https://ukieweb.com/envato/ukiecard/style1/assets/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://ukieweb.com/envato/ukiecard/style1/assets/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://ukieweb.com/envato/ukiecard/style1/assets/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" href="https://ukieweb.com/envato/ukiecard/style1/assets/img/favicons/apple-touch-icon.png">
-    <link rel="shortcut icon" href="https://ukieweb.com/envato/ukiecard/style1/assets/img/favicons/favicon.png">
-    <!-- Google Fonts -->
-    <link href="./index_files/css" rel="stylesheet" type="text/css">
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to levantam@github.io - JasonLe</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<style type="text/css"></style></head>
-<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <!-- Load page -->
-    <div class="animationload" style="display: none;">
-        <div class="loader" style="display: none;"></div>
-    </div>
-    <!-- End load page -->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+	 <!-- get the required files from 3rd party sources -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-    <div id="wraper">
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 
-        <!-- Start Home-header section -->
-        <section class="home-header border-bottom padding-block">
-            <!-- start container -->
-            <div class="container">
-                <!-- start row -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-5 col-lg-5 text-right">
-                        <!-- Your foto -->
-                        <div class="foto">
-                            <!-- for man -->
-                            <img src="./index_files/photo.png" alt="Ukieweb">
-                            <!-- for women -->
-                            <!-- <img src="./assets/img/photo_female.png" alt="Ukieweb"> -->
-                        </div>
-                        <!-- end your foto -->
-                    </div>
-                    <div class="col-xs-12 col-sm-7 col-lg-7">
-                        <!-- Your Name -->
-                        <h1 class="title">Jonh Doe</h1>
-                        <!-- Your Profession -->
-                        <h3 class="sub-title">Web Designer &amp; Mobile Application Developer</h3>
-                        <!-- social icon -->
-                        <div class="social">
-                            <ul class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="600">
-                                <!-- social icons -->
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="https://ukieweb.com/envato/ukiecard/style1/#"><i class="fa fa-youtube"></i></a></li>
-                                <!--
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-behance"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-pinterest"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-digg"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-deviantart"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-envelope-square"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-delicious"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-dropbox"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-skype"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-tumblr"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-vimeo-square"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-flickr"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-github-alt"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-renren"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-vk"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-xing"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-weibo"></i></a></li>
-                                    <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-rss"></i></a></li>
-                                -->
-                            </ul>
-                        </div>
-                        <!-- end social icon -->
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </section>
-        <!-- End Home-header section -->
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
 
-        <!-- Start Menu section -->
-        <nav class="menu">
-            <!-- start container -->
-            <div class="container">
-                <!-- start row -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-lg-12">
-
-                        <!-- start menu block (profile) -->
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/profile.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <!-- for man -->
-                                <img src="https://ukieweb.com/envato/ukiecard/style1/assets/img/menu/profile.gif?t=1456758470399" class="menu-img" data-img-name="profile" alt="Ukieweb">
-                                <!-- for women -->
-                                <!--  <img src="./assets/img/menu/profile_female.png" class="menu-img" data-img-name="profile_female" alt="Ukieweb" /> -->
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Profile</span>
-                        </a>
-                        <!-- end menu block (profile) -->
-
-                        <!-- start menu block (resume) -->
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/resume.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="./index_files/resume.png" class="menu-img" data-img-name="resume" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Resume</span>
-                        </a>
-                        <!-- end menu block (resume) -->
-
-                        <!-- start menu block (portfolio) -->
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/portfolio.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="./index_files/portfolio.png" class="menu-img" data-img-name="portfolio" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Portfolio</span>
-                        </a>
-                        <!-- end menu block (portfolio) -->
-
-                        <!-- start menu block (blog) -->
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/blog.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="./index_files/blog.png" class="menu-img" data-img-name="blog" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Blog</span>
-                        </a>
-                        <!-- end menu block (portfolio) -->
-
-                        <!-- start menu block (contact) -->
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/contact.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="./index_files/contact.png" class="menu-img" data-img-name="contact" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Contact</span>
-                        </a>
-                        <!-- end menu block (contact) -->
-                    </div>
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </nav>
-        <!-- End Menu section -->
-
-        <!-- Start Footer section -->
-        <footer class="footer">
-            <!-- start container -->
-            <div class="container">
-                <!-- start row -->
-                <div class="row">
-                    <!-- start phone number -->
-                    <div class="col-xs-12 col-sm-6 col-lg-3">
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-phone"></i></span> +38 012-3456-7890
-                        </a>
-                    </div>
-                    <!-- end phone number -->
-                    <!-- start email -->
-                    <div class="col-xs-12 col-sm-6 col-lg-3">
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-paper-plane"></i></span> info@yourdomain.com
-                        </a>
-                    </div>
-                    <!-- end email -->
-                    <!-- start address -->
-                    <div class="col-xs-12 col-sm-6 col-lg-3">
-                        <a href="https://ukieweb.com/envato/ukiecard/style1/#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-map-marker"></i></span> 44 King St, Melbourne VIC
-                        </a>
-                    </div>
-                    <!-- end address -->
-                    <!-- start Copyright -->
-                    <div class="col-xs-12 col-sm-6 col-lg-3 text-right">
-                        <span class="copyright">Copyright © 2015 All right reserved</span>
-                    </div>
-                    <!-- end Copyright -->
-                </div>
-                <!-- end row -->
-            </div>
-            <!-- end container -->
-        </footer>
-        <!-- End Footer section -->
-
-    </div>
-
-    <!-- Scroll to Top -->
-    <a href="https://ukieweb.com/envato/ukiecard/style1/#" class="btn scrollToTop"><i class="fa fa-angle-up"></i></a>
-    <!-- End Scroll to Top -->
-
-    <!-- Style Switcher -->
-    <!-- delete this from site once you have decided on a colour scheme - follow documentation for insructions -->
-    <div class="style-switcher style-off">
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-lg-12 text-center">
-
-                    <div class="switch-colours clearfix">
-                        <div class="set clearfix">
-
-                            <h3 class="lighter">Select A Color</h3>
-
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-blue" class="new-colour color-blue" id="color-blue" data-color="#00b6f9"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-orange" class="new-colour color-orange" id="color-orange" data-color="#ffc400"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-purple" class="new-colour color-purple" id="color-purple" data-color="#7c4dff"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-green" class="new-colour color-green" id="color-green" data-color="#9ccc65"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-red" class="new-colour color-red" id="color-red" data-color="#ff7043"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/color-brown" class="new-colour color-brown" id="color-brown" data-color="#ae8c64"></a>
-
-                            <h3 class="lighter">Select A Background</h3>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-white" class="new-bg bg-white" data-bg="#ffffff"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-grey" class="new-bg bg-grey" data-bg="#f5f5f5"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-light-blue" class="new-bg bg-light-blue" data-bg="#cfd8dc"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-dark-blue" class="new-bg bg-dark-blue" data-bg="#263238"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-dark-purple" class="new-bg bg-dark-purple" data-bg="#1e1f38"></a>
-                            <a href="https://ukieweb.com/envato/ukiecard/style1/bg-brown" class="new-bg bg-brown" data-bg="#383231"></a>
-
-                        </div>
-                        <!-- end set -->
-                    </div>
-
-                    <div class="style-open">
-                        <i class="fa fa-tint"></i>
-                    </div>
-                    <!-- end style-open -->
-
-                </div>
-            </div>
-            <!-- end row -->
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 
 
-    </div>
-    <!-- end Style Switcher -->
-
-<!-- Scripts -->
-<script src="./index_files/jquery-1.11.2.min.js" type="text/javascript"></script>
-<script src="./index_files/bootstrap.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.appear.js" type="text/javascript"></script>
-<script src="./index_files/jquery.nicescroll.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.mixitup.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.magnific-popup.min.js" type="text/javascript"></script>
-<script src="./index_files/owl.carousel.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.inview.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.knob.min.js" type="text/javascript"></script>
-<script src="./index_files/jquery.cookie.js" type="text/javascript"></script>
-<script src="./index_files/scripts.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
-<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr" style="width: 4px; z-index: 999999; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0; display: block;"><div class="nicescroll-cursors" style="position: relative; top: 0px; float: right; width: 2px; height: 556px; border: 1px solid rgb(255, 255, 255); border-radius: 5px; background-color: rgb(255, 255, 255); background-clip: padding-box;"></div></div></body></html>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</head>
+<body>
+<div id="loadding">
+	<div class="circle">
+		Loadding...
+	</div>
+</div>
+	<div class="container">
+		<div id="introduction" ng-controller="HomeCtrl">
+			<div id="info">
+				<div class="row">
+					<div class="col-md-3 left">
+						<img src="{{information.Avatar}}" style="width: 50%; border: none">
+						<img src="images/tamle.png" style="width: 60%; margin-top: 10px;" />
+						<div class="row social" >
+							<a href="#" target="_bank" ><i class="fa fa-facebook-square"></i></a>
+							<a href="#" target="_bank" ><i class="fa fa-google-plus-square"></i></a>
+							<a href="#" target="_bank" ><i class="fa fa-linkedin"></i></a>
+							<a href="#" target="_bank" ><i class="fa fa-twitter"></i></a>
+						</div>
+						<div class="row menu">
+							<a href="portfolio.html">Portfolio</a>
+							<a href="blog.html">Blogs</a>
+							<a href="#">CV</a>
+						</div>
+					</div>
+					<div class="col-md-9 right">
+						<div class="name">
+							
+							<h3>I'm <b>{{information.Name}}</b></h3>
+							<p class="career">{{information.Career}}</p>
+
+						</div>
+						<div class="row introduction">	
+							<p ng-bind-html="information.Introduction"></p>
+						</div>
+						
+
+					</div>
+				</div>	
+			</div><!--INFO-->
+					
+			<div class="row" id="footer">
+				<div class="col-md-4">
+					<i class="fa fa-envelope"></i> Email: abc@gmail.com
+				</div>
+				<div class="col-md-4"><i class="fa fa-phone-square"></i>  Phone: 098732748237423</div>
+				<div class="col-md-4"><i class="fa fa-map-marker"></i>  Address: Vietnam</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
