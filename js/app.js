@@ -39,7 +39,7 @@ app.controller("BlogCtrl", ['$scope', '$firebaseArray', function($scope, $fireba
 function displayLoadding(){
 	var isLoad = false;
 	var myInterval = window.setInterval(function () {
-		isLoad = true;
+		//isLoad = true;
 		$('#loadding').hide("slow");
 	},700);
 
@@ -50,13 +50,11 @@ function displayLoadding(){
 }
 function delay(){
 	var isLoad = false;
-	var myInterval = window.setInterval(function () {
+	var myInterval1 = window.setInterval(function () {
 		try {
 		    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
 		}
-		catch(err) {
-		   
-		}
+		catch(err) {}
 	  
 	  isLoad = true;
 
@@ -64,7 +62,7 @@ function delay(){
 
 	window.setTimeout(function () {
 		if(isLoad)
-	  	clearInterval(myInterval);
+	  	clearInterval(myInterval1);
 	},2000);
 }
 delay();
