@@ -41,12 +41,12 @@ function displayLoadding(){
 	var myInterval = window.setInterval(function () {
 		//isLoad = true;
 		$('#loadding').hide("slow");
-	},700);
+	},1000);
 
 	window.setTimeout(function () {
 		if(isLoad)
 	  		clearInterval(myInterval);
-	},700);
+	},1000);
 }
 function delay(){
 	var isLoad = false;
