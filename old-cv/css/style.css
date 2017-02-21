@@ -1,0 +1,210 @@
+body {
+      font-family: 'Roboto', sans-serif;
+		background: url("../images/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+.container{
+  width: 70% !important;
+}
+#loadding {
+    width: 100% !important;
+    height: 100% !important;
+    background: white;
+    position: absolute;
+    z-index: 99999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    opacity: 1;
+}
+#loadding .circle{
+	background: green;
+	width: 200px;
+	height: 200px;
+	color: white;
+	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.row {
+    margin-right: 0px !important; 
+    margin-left: 0px !important;
+}
+.breadcrumb{
+	background: #105B63;
+	border-radius: 0px !important;
+	color:white;
+}
+ #introduction{
+ 	background: white;
+ 	border: 1px solid #e4e4e3;
+ 	margin:100px auto;
+ 	padding: 10px 0px;
+ 	padding-bottom: 0px;
+ 	/*box-shadow: 10px 4px 0 #e4e4e3;
+ 	-webkit-box-shadow: 9px 4px 27px 0px #e4e4e3;
+-moz-box-shadow:    9px 4px 27px 0px #e4e4e3;
+box-shadow:         9px 4px 27px 0px #e4e4e3;*/
+overflow: hidden;
+ }
+ #footer{
+ 	margin-top: 10px;
+ 	padding: 20px 0px;
+ 	border-top:1px solid #e4e4e3;
+ 	background: #DB9E36;
+ 	color:white;
+ 	text-align: center;
+  font-family: "Pacifico", Roboto, sans-serif;
+ }
+ #introduction #info{
+ 	padding: 20px;
+ }
+ #introduction #info .left{
+ 	padding: 3px;
+ 	text-align: center;
+ }
+ #introduction #info .left .social{
+ 	margin-top: 20px;
+ 	font-size: 20px;
+ }
+  #introduction #info .left .social a{
+  	margin-right: 10px;
+ 
+  }
+ #introduction .menu{
+ 	text-align: center; 
+ 	margin: 20px;
+ }
+ #introduction .menu a{
+ 	color:gray;
+ 	padding: 10px;
+ 	border-bottom: 1px solid #e4e4e3;
+ 	display: block;
+ 	text-decoration: none;
+ }
+  #introduction .menu a:hover{
+  	color:  #002F2F;
+  }
+ 
+   #introduction #info .name {
+   	padding: 20px 0px;
+   	margin-bottom: 20px;
+   	border-bottom: 1px solid #e4e4e3;
+ }
+ #introduction #info .name h3{
+ 	font-size: 40px;
+ }
+ #introduction #info .name p{
+ 	color:gray;
+ }
+ #introduction .introduction{
+ 	text-align: justify;
+ 	padding: 10px;
+ 	font-size: 13px;
+ 	/*background: url("../images/bg-comment.png");
+ 	height: 200px;
+ 	width: 100%;*/
+ }
+
+ /*Portfolio*/
+ .container{
+ 	padding: 0px !important;
+ }
+ #portfolio, #blog-list{
+ 	background: white;
+ 	margin-top :20px !important;
+ 	
+ }
+ #portfolio #grid-gallery{
+min-height: 400px !important;
+ }
+ #portfolio .date{
+ 	color:red;
+ 	margin: 10px 0px;
+ }
+ #portfolio .description{
+ 	color:gray;
+ }
+ figcaption{
+  padding: 10px !important;
+}
+figcaption h3{
+  font-size: 20px;
+  color: gray !important;
+}
+ /*Blog*/
+ .blogs{
+ 	margin: 20px !important;
+
+ }
+ .blog{
+ 	margin-bottom: 50px !important;
+ 	padding-bottom: 10px;
+ 	border-bottom: 1px solid #e4e4e3;
+ 	cursor: pointer;
+ }
+  .blog:last-child{
+  	border:none;
+  }
+ .blog .img{
+ 	width: 100%;
+ }
+ .blog h3{
+ 	color: black !important;
+ }
+ .blog p.sumary{
+ 	color: gray !important;
+  font-size: 14px;
+ }
+ .blog span.date{
+ 	color: gray !important;
+ 	font-size: 12px;
+ }
+ #blogContent .modal.fade.in{
+ 	color: black !important;
+ 	padding: 0px !important;
+ 	margin: 0px !important;
+ 	border-radius: 0px !important;
+
+ }
+ #blogContent .modal .modal-dialog{
+width: 100%;
+margin: 0px;
+border-radius: 0px;
+}
+#blogContent .modal .modal-header{
+	border:none !important;	
+}
+#blogContent .modal .modal-content{
+	position: relative !important;
+}
+#blogContent .modal .close{
+	background:green;
+	opacity: 1 !important;
+	color:white;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	/*position: absolute !important;
+	right:0px !important;
+	top: 300px !important;*/
+}
+
+#blogContent .modal .modal-name{
+	font-size: 30px;
+	margin: 20px 0px;
+}
+ #blogContent .modal p.modal-meta {
+    margin: 10px 0px;
+    color: gray;
+    font-style: italic;
+}
