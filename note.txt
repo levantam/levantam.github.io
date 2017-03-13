@@ -1,0 +1,14 @@
+1. clone git
+	git clone abc
+2. check status
+	git status
+3. create branch
+	git branch branch_name
+	- check status: git status
+	- switch to branch: git clone task1: task1 is branch_name
+3. push code
+	$ git push -u origin task1
+4. Githubpage: create new pull request => merge pull request
+5. change to master and pull new code
+	git checkout master
+	git pull
