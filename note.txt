@@ -12,3 +12,4 @@
 5. change to master and pull new code
 	git checkout master
 	git pull
+	dd
