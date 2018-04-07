@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+.page-inner {
+  max-width: 80%; }
+
+.book-header {
+  display: none; }
+
+body {
+  font-size: 14px !important; }
+
+.book-summary, .book-body {
+  margin-top: 70px !important; }
+
+.header {
+  height: 70px;
+  background: #24292E;
+  padding-top: 10px; }
+  .header a {
+    color: white !important; }
+  .header .navbar {
+    background: transparent !important; }
+    .header .navbar .navbar-brand {
+      font-size: 25px; }
+  .header .about-link {
+    border-color: yellow;
+    font-size: 15px; }
+    .header .about-link:hover {
+      color: black !important;
+      background-color: #e4e4e3; }
+
+.book-summary .gitbook-link {
+  display: none !important; }
