@@ -1,8 +1,0 @@
-{
-  "plugins": [ "header" ],
-  "pluginsConfig": {
-    "layout": {
-      "headerPath" : "layouts/header.html"
-    }
-  }
-}
