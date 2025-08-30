@@ -10,7 +10,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const { navItems, brand, ctaButton } = navigationData;
+  const { navItems, ctaButton } = navigationData;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
