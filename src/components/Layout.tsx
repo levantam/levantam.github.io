@@ -35,21 +35,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Navigation Links */}
             <div className="hidden md:block animate-slide-in-right">
               <div className="flex items-center space-x-2">
-                {navItems.map((item, index) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={scrollToTop}
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 animate-fade-in-delay ${
-                      location.pathname === item.path
-                        ? 'text-white bg-primary-600 shadow-lg'
-                        : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item, index) => {
+                  if (item.external) {
+                    return (
+                      <a
+                        key={item.path}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                        className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 animate-fade-in-delay text-neutral-700 hover:text-primary-600 hover:bg-primary-50 inline-flex items-center"
+                      >
+                        {item.label}
+                        <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    );
+                  }
+                  
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={scrollToTop}
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 animate-fade-in-delay ${
+                        location.pathname === item.path
+                          ? 'text-white bg-primary-600 shadow-lg'
+                          : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
                 <a
                   href={ctaButton.url}
                   target={ctaButton.external ? "_blank" : undefined}
@@ -82,23 +102,43 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {isMobileMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      scrollToTop();
-                    }}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      location.pathname === item.path
-                        ? 'text-white bg-primary-600'
-                        : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {navItems.map((item) => {
+                  if (item.external) {
+                    return (
+                      <a
+                        key={item.path}
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors text-neutral-700 hover:text-primary-600 hover:bg-primary-50"
+                      >
+                        {item.label}
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
+                    );
+                  }
+                  
+                  return (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        scrollToTop();
+                      }}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        location.pathname === item.path
+                          ? 'text-white bg-primary-600'
+                          : 'text-neutral-700 hover:text-primary-600 hover:bg-primary-50'
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           )}

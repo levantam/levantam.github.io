@@ -1,6 +1,7 @@
 export interface NavItem {
   path: string;
   label: string;
+  external?: boolean;
 }
 
 export interface NavigationData {
@@ -17,7 +18,8 @@ export const navigationData: NavigationData = {
   brand: "tamle.cv",
   navItems: [
     { path: '/', label: 'Home' },
-    { path: '/work', label: 'Work' }
+    { path: '/work', label: 'Work' },
+    { path: 'https://devblogs.gitbook.io/', label: 'Blogs', external: true }
   ],
   ctaButton: {
     label: "Let's Talk →",
