@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/levantam.github.io/static/css/main.b0ebd5c5.css",
+    "main.js": "/levantam.github.io/static/js/main.5b466735.js",
+    "static/js/453.87a2297f.chunk.js": "/levantam.github.io/static/js/453.87a2297f.chunk.js",
+    "index.html": "/levantam.github.io/index.html",
+    "main.b0ebd5c5.css.map": "/levantam.github.io/static/css/main.b0ebd5c5.css.map",
+    "main.5b466735.js.map": "/levantam.github.io/static/js/main.5b466735.js.map",
+    "453.87a2297f.chunk.js.map": "/levantam.github.io/static/js/453.87a2297f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0ebd5c5.css",
+    "static/js/main.5b466735.js"
+  ]
+}
