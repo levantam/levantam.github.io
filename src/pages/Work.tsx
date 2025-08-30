@@ -2,6 +2,49 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { workExperience, WorkExperienceType } from '../data/workExperience';
 
+// Utility function to calculate total work experience
+const calculateTotalExperience = (experiences: WorkExperienceType[]) => {
+  let totalMonths = 0;
+
+  experiences.forEach((exp) => {
+    // Parse start date
+    const startDate = parseWorkDate(exp.startYear);
+    // Parse end date (use current date if "Present")
+    const endDate = exp.endYear === "Present" ? new Date() : parseWorkDate(exp.endYear);
+
+    if (startDate && endDate) {
+      // Calculate difference in months
+      const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 + 
+                        (endDate.getMonth() - startDate.getMonth());
+      totalMonths += monthsDiff;
+    }
+  });
+
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  return { years, months, totalMonths };
+};
+
+// Helper function to parse work date strings like "Jun 2024", "Apr 2022"
+const parseWorkDate = (dateString: string): Date | null => {
+  const monthMap: { [key: string]: number } = {
+    Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+    Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+  };
+
+  const parts = dateString.trim().split(' ');
+  if (parts.length !== 2) return null;
+
+  const [month, year] = parts;
+  const monthIndex = monthMap[month];
+  const yearNum = parseInt(year);
+
+  if (monthIndex === undefined || isNaN(yearNum)) return null;
+
+  return new Date(yearNum, monthIndex, 1);
+};
+
 interface WorkExperienceProps {
   experience: WorkExperienceType;
   index: number;
@@ -11,6 +54,32 @@ interface WorkExperienceProps {
 const WorkExperience: React.FC<WorkExperienceProps> = ({ experience, index, isHighlighted }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
   const isCurrentJob = experience.endYear === "Present";
+
+  // Calculate duration for this specific job
+  const calculateJobDuration = (startYear: string, endYear: string) => {
+    const startDate = parseWorkDate(startYear);
+    const endDate = endYear === "Present" ? new Date() : parseWorkDate(endYear);
+
+    if (!startDate || !endDate) return { years: 0, months: 0 };
+
+    const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 + 
+                      (endDate.getMonth() - startDate.getMonth());
+
+    const years = Math.floor(monthsDiff / 12);
+    const months = monthsDiff % 12;
+
+    return { years, months };
+  };
+
+  const jobDuration = calculateJobDuration(experience.startYear, experience.endYear);
+
+  // Format duration string
+  const formatDuration = (years: number, months: number) => {
+    if (years === 0 && months === 0) return "Less than 1 month";
+    if (years === 0) return `${months} month${months !== 1 ? 's' : ''}`;
+    if (months === 0) return `${years} year${years !== 1 ? 's' : ''}`;
+    return `${years} year${years !== 1 ? 's' : ''} ${months} month${months !== 1 ? 's' : ''}`;
+  };
 
   return (
     <div 
@@ -49,7 +118,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ experience, index, isHi
             <p className="text-sm text-neutral-500">{experience.location}</p>
           </div>
         </div>
-        <div className="mt-3 md:mt-0">
+        <div className="mt-3 md:mt-0 flex flex-col items-end space-y-2">
           <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold shadow-md ${
             isCurrentJob
               ? 'text-white ring-2 bg-primary-600 ring-primary-200'
@@ -62,6 +131,14 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({ experience, index, isHi
               </span>
             )}
           </span>
+          <div className="flex items-center px-3 py-1 text-xs font-medium rounded-full bg-neutral-100 border border-neutral-200">
+            <svg className="w-3 h-3 mr-1 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-neutral-600">
+              {formatDuration(jobDuration.years, jobDuration.months)}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -134,6 +211,17 @@ const Work: React.FC = () => {
   const location = useLocation();
   const [highlightedCompany, setHighlightedCompany] = useState<string | null>(null);
   const [activeCompany, setActiveCompany] = useState<string | null>(null);
+
+  // Calculate total work experience
+  const totalExperience = calculateTotalExperience(workExperience);
+  
+  // Format the experience string
+  const formatExperience = (years: number, months: number) => {
+    if (years === 0 && months === 0) return "0 months";
+    if (years === 0) return `${months} month${months !== 1 ? 's' : ''}`;
+    if (months === 0) return `${years} year${years !== 1 ? 's' : ''}`;
+    return `${years} year${years !== 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}`;
+  };
 
   useEffect(() => {
     // Check if there's a hash in the URL and scroll to it
@@ -232,9 +320,19 @@ const Work: React.FC = () => {
         <h1 className="mb-6 text-5xl font-black leading-tight md:text-6xl text-neutral-900">
           Work Experience
         </h1>
-        <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">
-          
-        </p>
+        <div className="mx-auto max-w-2xl">
+          <div className="mb-4 inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 rounded-full border border-primary-200">
+            <svg className="w-5 h-5 mr-3 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-lg font-semibold text-primary-800">
+              Total Experience: {formatExperience(totalExperience.years, totalExperience.months)}
+            </span>
+          </div>
+          <p className="text-lg leading-relaxed text-neutral-600">
+            Journey through my professional career and the technologies that have shaped my expertise.
+          </p>
+        </div>
       </div>
 
       {/* Work Experience Navigation */}
