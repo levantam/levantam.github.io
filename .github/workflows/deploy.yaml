@@ -15,10 +15,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: |
+          rm -rf node_modules
+          npm ci --legacy-peer-deps
 
       - name: Build and sync to repo root layout
         run: npm run pages:sync
