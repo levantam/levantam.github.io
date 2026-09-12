@@ -1,0 +1,16 @@
+{
+  "brand": {
+    "initials": "TL",
+    "name": "Tam Le",
+    "title": "Senior Software Engineer"
+  },
+  "links": [
+    { "id": "home", "label": "Home", "href": "#" },
+    { "id": "experience", "label": "Experience", "href": "#experience" },
+    { "id": "stack", "label": "Stack", "href": "#stack" },
+    { "id": "certifications", "label": "Certificates", "href": "#certifications" },
+    { "id": "side-projects", "label": "Projects", "href": "#side-projects" },
+    { "id": "blogs", "label": "Blogs", "href": "https://devblogs.gitbook.io/", "external": true }
+  ],
+  "cta": { "label": "Let's Talk", "href": "#contact" }
+}

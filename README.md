@@ -1,123 +1,99 @@
-# Portfolio Website
+# Tam Le — Portfolio
 
-A modern, responsive portfolio website built with React and Tailwind CSS.
+Single-page portfolio for [levantam.github.io](https://levantam.github.io). Built with **Vite**, **React 19**, **Tailwind CSS 4**, **shadcn/ui**, and **Motion**. Content lives in JSON so you can update copy without touching components.
 
-## Features
+## Quick start
 
-- **Home Page**: Personal introduction with avatar, skills overview, and quick stats
-- **Work Experience**: Detailed work history with expandable descriptions, technologies used, and achievements
-- **Tools & Resources**: Collection of development tools and utilities with search and filtering
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations and hover effects
-
-## Technologies Used
-
-- React 18
-- React Router DOM
-- Tailwind CSS
-- Modern JavaScript (ES6+)
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (version 14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   cd portfo
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Project Structure
-
-```
-src/
-  components/
-    Layout.js          # Main layout with navigation and footer
-  pages/
-    Home.js           # Home page with personal info
-    Work.js           # Work experience page
-    Tools.js          # Tools and resources page
-  data/
-    workExperience.js # Work experience data
-    tools.js          # Tools and resources data
-  App.js              # Main app component with routing
-  index.css           # Global styles with Tailwind imports
-```
-
-## Customization
-
-### Personal Information
-
-Update the following files with your personal information:
-
-1. **Home Page** (`src/pages/Home.js`):
-   - Change name, title, and description
-   - Update avatar initials
-   - Modify skills and stats
-
-2. **Work Experience** (`src/data/workExperience.js`):
-   - Add your work experiences
-   - Update company names, positions, dates
-   - Include technologies and achievements
-
-3. **Tools** (`src/data/tools.js`):
-   - Add your tools and projects
-   - Update links and descriptions
-
-### Styling
-
-The project uses Tailwind CSS with a custom color palette. You can modify:
-
-- **Colors**: Update `tailwind.config.js` to change the primary color scheme
-- **Fonts**: Modify font imports in `src/index.css`
-- **Components**: Customize individual components in their respective files
-
-### Navigation
-
-Update navigation items in `src/components/Layout.js` to add or remove pages.
-
-## Building for Production
-
-To create a production build:
+**Requirements:** Node.js 20+
 
 ```bash
-npm run build
+npm install --legacy-peer-deps
+npm run dev
 ```
 
-This builds the app for production to the `build` folder.
+Open the URL Vite prints (usually `http://localhost:5173`).
 
-## Deployment
+```bash
+npm run build    # output → dist/
+npm run preview  # serve production build locally
+npm test         # content + experience helpers
+```
 
-The built app can be deployed to any static hosting service like:
+## Edit your content (no React required)
 
-- Netlify
-- Vercel
-- GitHub Pages
-- Firebase Hosting
+All public copy is under `content/`:
+
+| File | What to change |
+|------|----------------|
+| `content/profile.json` | Name, title, bio, hero headlines, avatar URL, social links |
+| `content/site.json` | Status pill, experience summary label, **contact CTA** |
+| `content/navigation.json` | Header links, blog URL, “Let’s Talk” anchor |
+| `content/experiences.json` | Six roles (cards + modal): summaries, highlights, tech, logos |
+| `content/skills.json` | Three “Core competencies” pillars |
+| `content/certifications.json` | Certifications & credential images |
+| `content/about.json` | Extra about copy (reserved for future sections) |
+
+After editing JSON, save and refresh the dev server (or rebuild for production).
+
+### Contact email (important before HR outreach)
+
+Update the mailto link in `content/site.json`:
+
+```json
+"contact": {
+  "email": "mailto:your.real.email@domain.com",
+  "linkedin": "https://www.linkedin.com/in/lvtam/"
+}
+```
+
+The contact section’s **Send Direct Message** button uses `contact.email`. Replace the placeholder with your real address before deploying.
+
+Optional: set `profile.json` → `social.github` when you want the hero GitHub icon to appear.
+
+### Company logos (experience cards)
+
+1. **Best:** add PNGs to `public/companies/` named `{slug}.png` (e.g. `begroup.png`). They load first.
+2. **Until then:** each role can set `logoDomain` in `experiences.json` for a temporary site favicon fallback (LinkedIn logo URLs are blocked for hotlinking).
+3. **Override:** set `logoUrl` to a full `https://…` image URL or a path like `/companies/custom-name.png`.
+
+After editing JSON, save and refresh the dev server (or rebuild for production).
+
+## Design reference
+
+Static HTML mocks (layout reference only):
+
+- `design/screens/home.md`
+- `design/screens/detail-experience.md`
+
+## Deploy (GitHub Pages)
+
+Pushes to `master` run `.github/workflows/deploy.yaml`:
+
+1. `npm run build`
+2. Publish **`dist/`** to the `gh-pages` branch via `peaceiris/actions-gh-pages`
+
+`package.json` `"homepage"` is `https://levantam.github.io`. SPA routing uses `public/404.html` + redirect snippet in `index.html`.
+
+## Project layout
+
+```
+content/           # Editable JSON
+src/
+  components/
+    layout/        # SiteHeader
+    sections/      # Hero, Experience, Stack, Contact
+    experience/    # Cards + modal
+    ui/            # shadcn primitives
+  lib/content.ts   # Loads JSON into the app
+  pages/HomePage.tsx
+docs/superpowers/  # Design spec + implementation plan
+```
+
+## Specs
+
+- Design: `docs/superpowers/specs/2026-09-12-portfolio-redesign-design.md`
+- Plan: `docs/superpowers/plans/2026-09-12-portfolio-redesign.md`
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## Contact
-
-- Email: tam.le@example.com
-- GitHub: [Your GitHub Profile]
-- LinkedIn: [Your LinkedIn Profile]
+MIT (see `LICENSE` if present).

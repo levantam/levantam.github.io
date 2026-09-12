@@ -1,0 +1,17 @@
+{
+  "sectionEyebrow": "Certificates",
+  "sectionTitle": "Professional Certificates",
+  "sectionSubtitle": "Validated cloud and engineering credentials alongside 12+ years of production experience. Additional certifications are in progress.",
+  "items": [
+    {
+      "id": "azure-developer-associate",
+      "title": "Microsoft Certified: Azure Developer Associate",
+      "issuer": "Microsoft",
+      "issuedDate": "2021-03-11",
+      "expiryDate": "2023-03-11",
+      "credentialId": "H713-7459",
+      "image": "/certificates/azure-developer-associate.png",
+      "summary": "Validated skills in designing, building, testing, and maintaining cloud applications and services on Microsoft Azure."
+    }
+  ]
+}

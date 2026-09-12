@@ -1,0 +1,11 @@
+{
+  "sectionEyebrow": "Side Projects",
+  "sectionTitle": "Personal Builds & Experiments",
+  "sectionSubtitle": "A few things I'm building outside of day-to-day work. Content will be added soon.",
+  "placeholderLabel": "Project details coming soon — update this slot later.",
+  "items": [
+    { "id": "side-project-1", "placeholder": true },
+    { "id": "side-project-2", "placeholder": true },
+    { "id": "side-project-3", "placeholder": true }
+  ]
+}

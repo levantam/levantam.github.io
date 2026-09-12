@@ -1,0 +1,16 @@
+{
+  "title": "Tam Le — Senior Software Engineer",
+  "location": "Ho Chi Minh City, Vietnam",
+  "statusPill": "Open to Senior Engineering Opportunities",
+  "totalExperience": {
+    "eyebrow": "TOTAL PRODUCTION EXP",
+    "duration": "12 Years, 5 Months",
+    "range": "(2012 – Present)"
+  },
+  "contact": {
+    "headline": "Interested in Collaborating?",
+    "subheadline": "Whether you are planning a high-concurrency microservices rollout, redesigning legacy monoliths, or seeking an experienced backend technical leader.",
+    "email": "mailto:cvtamle@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/lvtam/"
+  }
+}

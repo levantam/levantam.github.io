@@ -1,18 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@config "../tailwind.config.js";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
-  
+  html,
   body {
-    @apply font-sans antialiased;
+    overscroll-behavior: none;
   }
-  
-  code {
-    @apply font-mono;
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: "Plus Jakarta Sans", sans-serif;
+  }
+  :root {
+    --background: #f9f9ff;
+    --foreground: #161c26;
+    --card: #ffffff;
+    --card-foreground: #161c26;
+    --popover: #ffffff;
+    --popover-foreground: #161c26;
+    --primary: #006d3e;
+    --primary-foreground: #ffffff;
+    --secondary: #e0dfe5;
+    --secondary-foreground: #46464b;
+    --muted: #e8eefd;
+    --muted-foreground: #3b4a3f;
+    --accent: #00f090;
+    --accent-foreground: #00210f;
+    --destructive: #ba1a1a;
+    --destructive-foreground: #ffffff;
+    --border: #bacbbc;
+    --input: #bacbbc;
+    --ring: #006d3e;
+    --chart-1: #006d3e;
+    --chart-2: #00f090;
+    --chart-3: #5ceaae;
+    --chart-4: #006c49;
+    --chart-5: #002113;
+    --radius: 0.625rem;
+    --sidebar: #f9f9ff;
+    --sidebar-foreground: #161c26;
+    --sidebar-primary: #006d3e;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #00f090;
+    --sidebar-accent-foreground: #00210f;
+    --sidebar-border: #bacbbc;
+    --sidebar-ring: #006d3e;
+  }
+  .dark {
+    --background: #161c26;
+    --foreground: #ecf1ff;
+    --card: #2b313c;
+    --card-foreground: #ecf1ff;
+    --popover: #2b313c;
+    --popover-foreground: #ecf1ff;
+    --primary: #00f090;
+    --primary-foreground: #00210f;
+    --secondary: #46464b;
+    --secondary-foreground: #e3e2e7;
+    --muted: #2b313c;
+    --muted-foreground: #bacbbc;
+    --accent: #006d3e;
+    --accent-foreground: #ffffff;
+    --destructive: #ffdad6;
+    --destructive-foreground: #93000a;
+    --border: rgb(255 255 255 / 10%);
+    --input: rgb(255 255 255 / 15%);
+    --ring: #00f090;
+    --sidebar: #2b313c;
+    --sidebar-foreground: #ecf1ff;
+    --sidebar-primary: #00f090;
+    --sidebar-primary-foreground: #00210f;
+    --sidebar-accent: #006d3e;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: rgb(255 255 255 / 10%);
+    --sidebar-ring: #00f090;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
 }

@@ -1,0 +1,152 @@
+{
+  "experiences": [
+    {
+      "slug": "begroup",
+      "initials": "BE",
+      "active": true,
+      "position": "Senior Software Engineer",
+      "company": "BeGroup",
+      "companyDisplay": "BeGroup",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "Jun 2024",
+      "endDate": "Present",
+      "cardSummary": "Built internal operations portals, multi-partner bus e-ticketing workflows, and automated data collection pipelines using Golang, React, Next.js, MySQL, and GCP.",
+      "summary": "Engineered full-stack operations management portals, multi-partner bus e-ticketing purchasing workflows, and automated data collection pipelines.",
+      "details": "Engineered full-stack solutions across digital goods and operations management platforms using Golang, React, Next.js, Vite, MySQL, and Google Cloud Platform (GCP). Designed and implemented internal management portals for operations teams, integrated multi-partner APIs for bus e-ticketing workflows, and built automated data collection pipelines.",
+      "highlights": [
+        "Developed internal operations management portals using React, Next.js, and Vite to streamline administrative tasks",
+        "Implemented end-to-end bus e-ticketing booking workflows via integrations with multiple third-party partners",
+        "Engineered automated data collection workflows and backend services using Golang and MySQL deployed on Google Cloud Platform (GCP)"
+      ],
+      "technologies": ["Golang", "React", "Next.js", "Vite", "MySQL", "GCP", "Kubernetes", "REST API"],
+      "tags": ["Full-stack", "Golang", "Next.js", "React", "Vite", "MySQL", "GCP", "API Integration", "Automation"],
+      "logoUrl": "/companies/be.jpeg",
+      "logoDomain": "be.com.vn"
+    },
+    {
+      "slug": "redex-eco",
+      "initials": "RX",
+      "active": false,
+      "position": "Senior Software Engineer",
+      "company": "REDEX.ECO",
+      "companyDisplay": "REDEX.ECO",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "Sep 2023",
+      "endDate": "Jun 2024",
+      "cardSummary": "Led a 5-engineer team to architect and deliver microservices, background processing, and trading features for a Renewable Energy Certificate spot exchange.",
+      "summary": "Led a 5-engineer team in delivering a microservices-based spot exchange for Renewable Energy Certificates (RECs) on Azure.",
+      "details": "Led a 5-member Agile/Scrum team building a spot exchange for Renewable Energy Certificate (REC) trading. Designed cloud-native microservices architecture using C# and Azure services (Service Bus, Event Grid, Blob Storage, Hangfire, and Microsoft SQL Server) with a React frontend.",
+      "highlights": [
+        "Led a 5-member Agile engineering team to deliver a Renewable Energy Certificate (REC) spot exchange platform",
+        "Designed event-driven microservices architecture using Azure Service Bus and Event Grid for resilient transaction messaging",
+        "Implemented background processing with Hangfire and optimized data workflows on Microsoft SQL Server and Azure Blob Storage"
+      ],
+      "technologies": [
+        "C#",
+        "ASP.NET Core",
+        "React",
+        "Azure",
+        "Azure Service Bus",
+        "Azure Event Grid",
+        "Microsoft SQL Server",
+        "Azure Blob Storage",
+        "Hangfire"
+      ],
+      "tags": ["C#", "Team Leadership", "Microservices", "Azure", "Microsoft SQL Server", "Renewable Energy"],
+      "logoUrl": "/companies/redex.jpeg",
+      "logoDomain": "redex.eco"
+    },
+    {
+      "slug": "galaxyone-sovico",
+      "initials": "G1",
+      "active": false,
+      "position": "Senior Software Engineer",
+      "company": "GalaxyOne (Sovico Group)",
+      "companyDisplay": "GalaxyOne (Sovico Group)",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "Apr 2022",
+      "endDate": "Sep 2023",
+      "cardSummary": "Managed a team of 7 developers, architected .NET backends, and built client frontend portals for enterprise products across Sovico Group.",
+      "summary": "Managed a team of 7 developers and built enterprise RESTful APIs and frontend portals for Sovico Group.",
+      "details": "Managed an engineering team of 7 developers building enterprise products for GalaxyOne and Sovico Group. Built backends using .NET and the ABP Framework while driving frontend initiatives using Angular, React, and refine.",
+      "highlights": [
+        "Managed a 7-developer engineering team delivering enterprise-grade web applications on schedule",
+        "Built modular backends using .NET and ABP Framework to streamline multi-tenant architecture",
+        "Developed dynamic admin interfaces using React, Angular, and refine framework"
+      ],
+      "technologies": [".NET", "ABP Framework", "Angular", "React", "refine", "REST API"],
+      "tags": [".NET", "Team Management", "Enterprise", "Full-stack"],
+      "logoUrl": "/companies/galaxyone.jpeg",
+      "logoDomain": "sovico.vn"
+    },
+    {
+      "slug": "kms-technology",
+      "initials": "KMS",
+      "active": false,
+      "position": "Senior Software Engineer",
+      "company": "KMS Technology",
+      "companyDisplay": "KMS Technology",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "Jun 2017",
+      "endDate": "Apr 2022",
+      "cardSummary": "Engineered web software for US enterprise clients, built custom BI reporting packages, developed internal automation tools, and mentored engineering team members.",
+      "summary": "Delivered enterprise web applications, BI reporting, and developer tooling for major US client accounts.",
+      "details": "Engineered web solutions for enterprise clients in the US market. Managed requirements end-to-end—from impact analysis and root-cause debugging to custom change request deployments. Developed internal efficiency tools, mentored junior engineers, and authored complex reporting packages via SSIS, SSRS, and Crystal Reports.",
+      "highlights": [
+        "Delivered web software solutions for US enterprise client portfolios over a 5-year period",
+        "Engineered business reporting pipelines utilizing SQL Server Integration Services (SSIS), SSRS, and Crystal Reports",
+        "Developed internal developer automation tooling and conducted onboarding technical training for incoming engineers"
+      ],
+      "technologies": ["C#", ".NET", "TypeScript", "SQL Server", "SSIS", "SSRS", "Crystal Reports"],
+      "tags": ["C#", "Outsourcing", "US Clients", "Mentorship", "Reporting"],
+      "logoUrl": "/companies/kms.jpeg",
+      "logoDomain": "kms-technology.com"
+    },
+    {
+      "slug": "kootoro-vietnam",
+      "initials": "KO",
+      "active": false,
+      "position": "Software Engineer",
+      "company": "KOOTORO Vietnam Corporation",
+      "companyDisplay": "KOOTORO Vietnam Corporation",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "May 2015",
+      "endDate": "Jun 2017",
+      "cardSummary": "Engineered core backend payment gateway solutions and administrative monitoring dashboards.",
+      "summary": "Engineered core backend payment gateway solutions and administrative monitoring dashboards.",
+      "details": "Architected and built a backend payment gateway engine along with a centralized administration portal. Implemented database designs, backend web services (WCF, REST APIs), and frontend controls. Supported the Engineering Lead with code reviews and technical training.",
+      "highlights": [
+        "Architected and implemented payment gateway services handling transactional backend processing",
+        "Developed an administrative operational dashboard using ASP.NET MVC, Entity Framework, and Bootstrap",
+        "Collaborated with cross-functional sales and product teams to integrate third-party vendor APIs"
+      ],
+      "technologies": ["C#", "ASP.NET MVC", "Entity Framework", "REST API", "WCF", "SQL Server", "Bootstrap"],
+      "tags": ["C#", "Payment Gateway", "Backend", "ASP.NET"],
+      "logoUrl": "/companies/kootoro.jpeg",
+      "logoDomain": "kootoro.com.vn"
+    },
+    {
+      "slug": "softtel",
+      "initials": "ST",
+      "active": false,
+      "position": "Software Engineer",
+      "company": "SOFTTEL CO.LTD",
+      "companyDisplay": "SOFTTEL CO.LTD",
+      "location": "Ho Chi Minh City, Vietnam",
+      "startDate": "Apr 2014",
+      "endDate": "May 2015",
+      "cardSummary": "Developed backend APIs and application modules for web and Android applications.",
+      "summary": "Developed backend APIs and application modules for web and Android applications.",
+      "details": "Engineered REST APIs and web services powering internal company platforms and client-facing software. Built native Android components and backend ASP.NET MVC modules for various client engagements.",
+      "highlights": [
+        "Built backend web APIs using C# and ASP.NET MVC for external client projects",
+        "Developed application modules on Android using Java",
+        "Maintained and optimized database schemas for internal web tools"
+      ],
+      "technologies": ["C#", "ASP.NET MVC", "Java", "Android SDK", "REST API", "SQL"],
+      "tags": ["C#", "API Development", "Android", "Outsourcing"],
+      "logoUrl": "",
+      "logoDomain": "softtel.vn"
+    }
+  ]
+}

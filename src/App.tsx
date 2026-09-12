@@ -1,20 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Work from './pages/Work';
+import { Route, Routes } from "react-router-dom";
+import HomePage from "@/pages/HomePage";
 
-const App: React.FC = () => {
+export default function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
   );
-};
-
-export default App;
+}

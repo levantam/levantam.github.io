@@ -1,0 +1,38 @@
+{
+  "sectionTitle": "Tooling & Technical Capabilities",
+  "sectionEyebrow": "Core Competencies",
+  "pillars": [
+    {
+      "icon": "memory",
+      "title": "Backend & Cloud",
+      "subtitle": "Server-side platforms, data stores, and cloud runtimes",
+      "items": [
+        ".NET",
+        "C#",
+        "Golang",
+        "ABP Framework",
+        "MS SQL",
+        "MySQL",
+        "Azure",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "icon": "layers",
+      "title": "Frontend & UI",
+      "subtitle": "Modern web interfaces and type-safe client code",
+      "items": ["React.js", "Angular", "Next.js", "TypeScript"]
+    },
+    {
+      "icon": "cloud_sync",
+      "title": "Architecture & Delivery",
+      "subtitle": "Scalable systems, serverless, and cloud-native patterns",
+      "items": [
+        "Microservices",
+        "Serverless",
+        "Cloud Architecture"
+      ]
+    }
+  ]
+}

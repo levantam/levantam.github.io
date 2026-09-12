@@ -1,0 +1,30 @@
+{
+  "name": "Tam Le",
+  "title": "Senior Software Engineer",
+  "description": "I'm a Senior Software Engineer specializing in backend development with .NET and cloud platforms (Azure, AWS, GCP). Also experienced in frontend development using ReactJS for full-stack solutions.",
+  "hero": {
+    "greeting": "Hi everyone 👋, I'm Tam Le",
+    "headlinePrimary": "Senior Software Engineer",
+    "headlineSecondary": "Based in Ho Chi Minh City, Vietnam"
+  },
+  "avatar": {
+    "url": "/profile/intro.png",
+    "alt": "Tam Le — Senior Software Engineer"
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/lvtam/",
+    "github": "",
+    "email": "mailto:cvtamle@gmail.com"
+  },
+  "mainSkills": [
+    ".NET",
+    "Azure / GCP / AWS",
+    "React.js",
+    "System Architecture",
+    "Team Leadership"
+  ],
+  "resume": {
+    "label": "Download CV (PDF)",
+    "url": "/data/cv_tamle.pdf"
+  }
+}
