@@ -67,12 +67,15 @@ Static HTML mocks (layout reference only):
 
 ## Deploy (GitHub Pages)
 
-Pushes to `master` run `.github/workflows/deploy.yaml`:
+This repo is **`levantam.github.io`**: the **site root** must match Vite’s **`dist/`** output (`index.html`, `assets/`, static files at `/`, not under `public/`).
 
-1. `npm run build`
-2. Publish **`dist/`** to the `gh-pages` branch via `peaceiris/actions-gh-pages`
+1. `npm run pages:sync` — builds, then copies `dist/*` to the **repository root**
+2. Commit the synced files (`index.html`, `assets/`, `404.html`, etc.) and `git push origin master`
+3. In GitHub **Settings → Pages**, use branch **`master`**, folder **`/` (root)**
 
-`package.json` `"homepage"` is `https://levantam.github.io`. SPA routing uses `public/404.html` + redirect snippet in `index.html`.
+Dev uses **`index.vite.html`** (`npm run dev`). **`index.html`** at repo root is the production build after `pages:sync`.
+
+`package.json` `"homepage"` is `https://levantam.github.io`. SPA routing uses `404.html` + redirect snippet in `index.html`.
 
 ## Project layout
 

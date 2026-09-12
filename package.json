@@ -4,8 +4,9 @@
   "private": true,
   "homepage": "https://levantam.github.io",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite index.vite.html",
     "build": "tsc -b && vite build",
+    "pages:sync": "npm run build && bash scripts/sync-dist-to-root.sh",
     "preview": "vite preview",
     "test": "vitest run"
   },

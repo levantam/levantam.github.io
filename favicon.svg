@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Tam Le">
+  <rect width="32" height="32" rx="8" fill="#00f090" />
+  <rect
+    x="0.5"
+    y="0.5"
+    width="31"
+    height="31"
+    rx="7.5"
+    fill="none"
+    stroke="#161c26"
+    stroke-opacity="0.12"
+  />
+  <text
+    x="16"
+    y="21"
+    text-anchor="middle"
+    font-family="Plus Jakarta Sans, system-ui, sans-serif"
+    font-size="11"
+    font-weight="800"
+    fill="#00210f"
+  >
+    TL
+  </text>
+</svg>
