@@ -69,9 +69,9 @@ Static HTML mocks (layout reference only):
 
 This repo is **`levantam.github.io`**: the **site root** must match Vite’s **`dist/`** output (`index.html`, `assets/`, static files at `/`, not under `public/`).
 
-1. `npm run pages:sync` — builds, then copies `dist/*` to the **repository root**
-2. Commit the synced files (`index.html`, `assets/`, `404.html`, etc.) and `git push origin master`
-3. In GitHub **Settings → Pages**, use branch **`master`**, folder **`/` (root)**
+1. Push to **`master`** — CI runs `pages:sync`, then commits/pushes built root files (`index.html`, `assets/`, …). Deploy commits use **`[skip ci]`**.
+2. **Settings → Pages:** branch **`master`**, folder **`/` (root)** — not `gh-pages`.
+3. After deploy, wait **~2–10 minutes** and hard-refresh the browser.
 
 Dev uses **`index.vite.html`** (`npm run dev`). **`index.html`** at repo root is the production build after `pages:sync`.
 

@@ -42,6 +42,6 @@ jobs:
             logo.png logo192.png logo512.png manifest.json robots.txt; do
             [[ -e "$path" ]] && git add -A -- "$path"
           done
-          git diff --staged --quiet && echo "No site changes." && exit 0
+          git diff --staged --quiet && echo "No site changes to publish." && exit 0
           git commit -m "chore(pages): deploy production build [skip ci]"
           git push
