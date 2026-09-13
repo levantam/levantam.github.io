@@ -3,7 +3,14 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - master   # default branch for this repository
+      - master
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -25,3 +32,16 @@ jobs:
 
       - name: Build and sync to repo root layout
         run: npm run pages:sync
+
+      - name: Publish built site to master (GitHub Pages root)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for path in .nojekyll 404.html assets certificates companies data profile resume \
+            favicon-32.png favicon.ico favicon.png favicon.svg index.html \
+            logo.png logo192.png logo512.png manifest.json robots.txt; do
+            [[ -e "$path" ]] && git add -A -- "$path"
+          done
+          git diff --staged --quiet && echo "No site changes." && exit 0
+          git commit -m "chore(pages): deploy production build [skip ci]"
+          git push
